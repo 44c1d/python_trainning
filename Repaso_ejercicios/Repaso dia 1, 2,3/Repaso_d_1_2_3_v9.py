@@ -203,7 +203,7 @@ rta_si=["si","sí","s"]
 rta_no=["no","n"]
 if llueve in rta_si:
     if paraguas in rta_si:
-        print("Salí nomás")
+        print("Salí nomás")S
     elif paraguas in rta_no:
         print("Quedate en casa")    
     else:
