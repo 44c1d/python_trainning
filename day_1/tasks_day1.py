@@ -86,4 +86,8 @@ print(saludo + "Tu nombre tiene " + str(len(nombre)) + " caracteres.")
 glass1 = "milk"
 glass2 = "juice"
 glass1, glass2 = glass2, glass1
-print("Glass1: "+ glass1 + " " + "glass2: " + glass2)
+print("Glass1: "+ glass1 + " " + "Glass2: " + glass2)
+
+# Naming Variables: Aca vimos las reglas de las variables en Python
+
+

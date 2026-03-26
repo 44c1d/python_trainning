@@ -115,4 +115,4 @@ elif pasaje in rta_si:
 elif pasaje in rta_no:
     print("Gracias por consultar")
 else:
-    print("Respuesta no válida para pasaje")s
+    print("Respuesta no válida para pasaje")

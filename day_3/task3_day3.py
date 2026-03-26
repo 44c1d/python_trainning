@@ -7,7 +7,7 @@
 #Add pepperoni : $2 
 #Add Extra cheese : $2
 
-pizza_size = input("Hello! Welcome to the Python Pizza's. What size of pizza wnat to order? S ,M or L ").upper()
+pizza_size = input("Hello! Welcome to the Python Pizza's. What size of pizza wnat to order? S ,M or L ").strip().upper()
 
 if pizza_size == "S":
     bill = 15
@@ -16,10 +16,10 @@ elif pizza_size == "M":
 elif pizza_size =="L":
     bill = 25
 
-pepperoni = input("Do you want to add Pepperoni?($2 extra) Y or N ").upper()
+pepperoni = input("Do you want to add Pepperoni?($2 extra) Y or N ").strip().upper()
 if pepperoni =="Y":
     bill+2
-extra_cheese = input("Do you want to add extra cheese? ($2 extra) Y or N ").upper()
+extra_cheese = input("Do you want to add extra cheese? ($2 extra) Y or N ").strip().upper()
 if extra_cheese =="Y":
     bill+2
       

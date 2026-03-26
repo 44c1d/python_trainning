@@ -56,3 +56,5 @@ nombre = input("como te llamas?: ")
 nro_letras = len(nombre)
 
 print("Hola " + nombre + "! Tu nombre tiene " + str(nro_letras) + " letras.")
+
+

@@ -26,6 +26,8 @@ if costumer_height >= 120:
         print("Your ticket value is: $12")
 else:
     print("Sorry, you dont have the permitted height to riding this rollercoster")
-    
-                     
+
+ #Multiple if statement succession: Add to the rollercoster code the conditional for photo
+
+                    
 

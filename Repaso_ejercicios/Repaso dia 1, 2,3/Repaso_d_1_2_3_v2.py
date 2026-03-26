@@ -12,11 +12,11 @@
 
 # # Bonus: que el resultado se muestre todo en minúsculas y sin espacios.
 
-# ciudad= input("Dame tu ciudad de nacimiento").lower().strip()
+ciudad= input("Dame tu ciudad de nacimiento").lower().strip()
 
-# mascota= input("Decime el nombre de tu mascota").lower().strip() 
+mascota= input("Decime el nombre de tu mascota").lower().strip() 
 
-# print(ciudad+mascota)
+print(ciudad+mascota)
 
 
 # # 🔹 Día 2 (tipos de datos, operadores)
@@ -30,14 +30,14 @@
 # # Bonus: si el número tiene menos de 3 cifras, que avise "Número inválido".
 # numero = input("Ingresá un numero de tres cifras: ")
 
-# if len(numero) ==3 and numero.isdigit():
-#     digito1= int(numero[0])
-#     digito2= int(numero[1])
-#     digito3= int(numero[2])
-#     producto= digito1*digito2*digito3
-#     print(f"El producto de los digitos ingresados es: {producto}")
-# else:
-#     print("Numero correcto")
+if len(numero) ==3 and numero.isdigit():
+    digito1= int(numero[0])
+    digito2= int(numero[1])
+    digito3= int(numero[2])
+    producto= digito1*digito2*digito3
+    print(f"El producto de los digitos ingresados es: {producto}")
+else:
+    print("Numero correcto")
 
    
 
@@ -73,3 +73,4 @@ if pregunta1 in opciones_si:
         print("Pasá con un adulto")   
 else:
      print("No podés pasar")         
+

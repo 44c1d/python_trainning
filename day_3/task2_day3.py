@@ -18,4 +18,4 @@ if costumer_height >= 120:
     
     print(f"Your ticket value is : ${bill}")    
 else:
-    print("Sorry, you dont have the permitted height to riding this rollercoster")
+    print("Sorry, you dont have the permitted height for riding this rollercoster")
