@@ -1,113 +1,103 @@
-# 🆕 EJERCICIO 2 – Calculadora de envíos (con recargos)
-# Una tienda online cobra envío según el destino y el peso del paquete.
+# JERCICIO 3 – Calculadora de estacionamiento
+# Un estacionamiento cobra por hora, con descuentos según el tipo de vehículo y tiempo de estadía.
 
 # Preguntar:
 
-# "¿Peso del paquete? (en kg): "
+# "¿Cuántas horas estuvo estacionado? (ej: 2.5): "
 
-# "¿Destino? (local / nacional / internacional): ".lower().strip()
+# "¿Qué tipo de vehículo? (auto / moto / camioneta): ".lower().strip()
 
-# "¿Es envío express? (si/no): ".lower().strip()
+# "¿Es cliente frecuente? (si/no): ".lower().strip()
 
-# Reglas de costo base por destino:
+# Tarifas por hora según vehículo:
 
-# Local → $500
+# Auto → $200 por hora
 
-# Nacional → $1200
+# Moto → $100 por hora
 
-# Internacional → $3500
+# Camioneta → $300 por hora
 
-# Reglas de recargo:
+# Reglas de descuento:
 
-# Si el peso supera los 10 kg → recargo del 8% sobre el costo base
+# Si está más de 5 horas → 10% de descuento sobre el subtotal
 
-# Si es envío express → recargo del 15% sobre el costo base
+# Si es cliente frecuente → 5% de descuento sobre el subtotal
 
-# Los recargos se suman (no se aplican por separado, se acumulan)
+# Los descuentos se suman (ej: 10% + 5% = 15% de descuento total)
 
 # Mostrar:
 
 # text
-# Destino: [local/nacional/internacional]
-# Peso: [XX] kg
-# Recargo por peso: [XX]%
-# Recargo por express: [XX]%
-# Total a pagar: $[total]
+# Vehículo: [auto/moto/camioneta]
+# Horas: [XX]
+# Subtotal: $[XX]
+# Descuento aplicado: [XX]%
+# Total a pagar: $[XX]
 # Validaciones:
 
-# Peso > 0
+# Horas > 0
 
-# Destino solo "local", "nacional", "internacional"
+# Tipo de vehículo válido (auto, moto, camioneta)
 
-# Respuestas sí/no con listas
+# Respuesta de cliente frecuente válida (sí/no)
 
 # ✅ Ejemplo de ejecución
 # text
-# ¿Peso del paquete? (en kg): 12
-# ¿Destino? (local / nacional / internacional): internacional
-# ¿Es envío express? (si/no): si
+# ¿Cuántas horas estuvo estacionado? 6
+# ¿Qué tipo de vehículo? (auto / moto / camioneta): auto
+# ¿Es cliente frecuente? (si/no): si
 
-# Destino: internacional
-# Peso: 12 kg
-# Recargo por peso: 8%
-# Recargo por express: 15%
-# Total a pagar: $4305.00
+# Vehículo: auto
+# Horas: 6.0
+# Subtotal: $1200.00
+# Descuento aplicado: 15%
+# Total a pagar: $1020.00
 # Cálculo:
 
-# Base: $3500
+# Subtotal: 6 × $200 = $1200
 
-# Recargo peso (8%) = $280
+# Descuento: 10% (por +5h) + 5% (frecuente) = 15%
 
-# Recargo express (15%) = $525
+# Total: $1200 × 0.85 = $1020
 
-# Total = 3500 + 280 + 525 = $4305
-# "¿Peso del paquete? (en kg): "
+# ¿Lo hacés? Acordate:
 
-# "¿Destino? (local / nacional / internacional): ".lower().strip()
+# Validar primero
 
-# "¿Es envío express? (si/no): ".lower().strip()
+# Calcular después
 
-# Reglas de costo base por destino:
+# Mostrar al final
 
-peso=float(input("¿Peso del paquete? (en kg): "))
-destino= input("¿Destino? (local / nacional / internacional): ").lower().strip()
-rta_destino=["local","nacional","internacional"]
-express= input("¿Es envío express? (si/no): ").lower().strip()
+# Cuando lo tengas, me lo pasás.
+
+#-----------Input--------------#
+
+horas=float(input("¿Cuántas horas estuvo estacionado? (ej: 2.5): "))
+vehiculo=input("¿Qué tipo de vehículo? (auto / moto / camioneta): ").lower().strip()
+rta_vehiculo=["auto","moto","camioneta"]
+cliente=input("¿Es cliente frecuente? (si/no): ").lower().strip()
 rta_si=["si","sí","s"]
 rta_no=["no","n"]
 
-if destino in rta_destino == "internacional":
-    total_destino = 3500
-elif destino in rta_destino == "nacional":
-    total_destino = 1200
-elif destino in rta_destino == "local":  
-    total_destino = 500
-    if peso > 10:
-            recargo_peso= 8          
-            total = (total_destino*recargo_peso)/100
-    elif peso <=9:
-            recargo_peso= 0
-            total= total_destino
-    elif peso <=0:
-        print("Valor equivocado")
-        if express in rta_si:
-            recargo_express= 15
-            total = (destino *recargo_express)/100
-        elif express in rta_no:
-            recargo_express=0
-            pass
-        else:
-            print("Valor equivocado")
+#----------Validaciones--------#
+
+if horas <=0:
+    print(f"{horas} es un valor incorrecto")
+elif vehiculo not in rta_vehiculo:
+    print(f"{vehiculo} es un valor incorrecto")
+elif cliente not in rta_si + rta_no:
+    print(f"{cliente} es un valor incorrecto")
 else:
-    print("Valor equivocado")
 
-print(f"Destino: {destino}\nPeso: {peso}\nRecargo por peso: {recargo_peso}\nRecargo por express: {recargo_express}\nTotal a pagar: {total}")
+    if vehiculo == "auto":
+        base= 200
+    elif vehiculo =="moto":
+        base = 100
+    elif vehiculo =="camioneta":
+        base = 300
+    elif horas >=5:
+        total= (base*10)/100
+    elif cliente in rta_si:
+        total= (total*5)/100
 
-            
-
-
-
-
-               
-
-
+                   

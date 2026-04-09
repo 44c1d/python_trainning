@@ -58,6 +58,7 @@ if entrada not in rta_entrada:
     print(f"{entrada} es un valor incorrecto")
 elif edad <=0:
     print(f"{edad} es un valor incorrecto")
+    #condiciones
 else:
     if entrada == "vip":
         if edad <18:

@@ -12,7 +12,7 @@ if user_choice not in rta_user:
     print(f"{user_choice.capitalize()} es inválido. Perdiste!")
 else:
     print(f"Elegiste: {user_choice}!")
-    print(f"La compu eleigió: {computer_choice}!")
+    print(f"La compu eligió: {computer_choice}!")
     if user_choice =="piedra" and computer_choice == "tijeras":
         print("Ganaste!")
     elif user_choice =="piedra" and computer_choice == "papel":
@@ -33,26 +33,5 @@ else:
         print("Empate!")
 
             
-
-
-# if juego == "Piedra" and random_juego =="Tijeras": 
-#         print("Ganaste!")
-#         if juego == "Piedra" and random_juego == "Papel":
-#             print ("Perdiste!")
-#         elif juego == "Piedra" and random_juego == "Piedra":
-#             print("Empate!")
-# elif juego == "Papel" and random_juego == "Piedra":
-#         print ("Ganaste!")
-#         if juego == "Papel" and random_juego == "Tijeras":
-#             print("Perdiste!")
-#         elif juego == "Papel" and random_juego == "Papel":
-#             print("Empate!")
-# elif juego == "Tijeras" and random_juego == "Papel":
-#         print("Ganaste!")
-#         if juego == "Tijeras" and random_juego == "Piedra":
-#             print("Perdiste!")
-#         elif juego == "Tijeras" and random_juego == "Tijeras":
-#             print("Empate!")
-
 
 

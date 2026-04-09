@@ -25,7 +25,7 @@ nombre1 = input("Nombre del contacto 1: ").lower().strip()
 
 telefono1 = int(input("Teléfono del contacto 1:"))
 
-contacto1 = (f"{nombre1.capitalize()}, {telefono1}")  
+contacto1 = ([nombre1.capitalize(),telefono1])   
 
 contactos.append(contacto1)
 
@@ -33,7 +33,7 @@ nombre2 = input("Nombre del contacto 2: ").lower().strip()
 
 telefono2 = int(input("Teléfono del contacto 2:"))
 
-contacto2 = (f"{nombre2.capitalize()}, {telefono2}")  
+contacto2 = ([nombre2.capitalize(),telefono2])  
 
 contactos.append(contacto2)
 
@@ -41,7 +41,7 @@ nombre3 = input("Nombre del contacto 3: ").lower().strip()
 
 telefono3 = int(input("Teléfono del contacto 3:"))
 
-contacto3 = (f"{nombre3.capitalize()}, {telefono3}")  
+contacto3 = ([nombre3.capitalize(),telefono3])  
 
 contactos.append(contacto3)
 

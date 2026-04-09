@@ -61,47 +61,18 @@ elif peso <=0:
     print(f"como vas a poner {peso} de peso, pelotudo")
 else:
 
-    if destino in rta_destino == "internacional":
+    if destino == "internacional":
         subtotal= 3500
-        total= subtotal
-        porc_rec= 0
-        if peso >=10:
-            recargo_peso = total* 0.08
-            porc_rec += 8
-            
-        elif express in rta_si:
-            recargo_express= total * 0.15
-            porc_rec += 15
-            total_recargos= recargo_peso + recargo_express
-            total = total + total_recargos
-            print(f"Destino: {destino}\nPeso: {peso}\nRecargo total: {porc_rec}\nDescuento de: %{porc_rec}\nTotal a pagar: ${total}")
-    elif destino in rta_destino == "nacional":
+    elif destino == "nacional":
         subtotal= 1200
-        total= subtotal
-        porc_rec= 0
-        if peso >=10:
-            recargo_peso = total* 0.08
-            porc_rec += 8
-            
-        elif express in rta_si:
-            recargo_express= total * 0.15
-            porc_rec += 15
-            total_recargos= recargo_peso + recargo_express
-            total = total + total_recargos
-            print(f"Destino: {destino}\nPeso: {peso}\nRecargo total: {porc_rec}\nDescuento de: %{porc_rec}\nTotal a pagar: ${total}")        
-    elif destino in rta_destino == "local":
+    else:
         subtotal= 500
-        total= subtotal
-        porc_rec= 0
-        if peso >=10:
-            recargo_peso = total* 0.08
-            porc_rec += 8
-            
-        elif express in rta_si:
-            recargo_express= total * 0.15
-            porc_rec += 15
-            total_recargos= recargo_peso + recargo_express
-            total = total + total_recargos
-            print(f"Destino: {destino}\nPeso: {peso}\nRecargo total: {porc_rec}\nDescuento de: %{porc_rec}\nTotal a pagar: ${total}")        
-            
+
+    if peso >10:
+        recargo_total+= 8
+    if express in rta_si:
+        recargo_total+= 15
+
+    total = subtotal + (1+recargo_total/100) 
+        
 
