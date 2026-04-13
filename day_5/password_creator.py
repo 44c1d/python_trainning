@@ -67,16 +67,16 @@ nro_numeros = int(input("¿Cuántas números querés que haya en tu contraseña?
 
 
 for let in range (0,nro_letras):
-    password +=  random.choice(letras)
+    password.append(random.choice(letras))
    
 
 for num in range (0,nro_numeros):
-    password += random.choice(numeros)
+    password.append(random.choice(numeros))
   
     
     
 for carac in range (0,nro_caract) :
-    password +=  random.choice(caracteres_esp)
+    password.append(random.choice(caracteres_esp))
 
 
 
